@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: security-dashboard
+Version: 0.1.0
+Summary: Reference implementation of a security operations dashboard pipeline
+Author: Example
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file

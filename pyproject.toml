@@ -1,0 +1,15 @@
+[project]
+name = "security-dashboard"
+version = "0.1.0"
+description = "Reference implementation of a security operations dashboard pipeline"
+readme = "docs/security_dashboard_plan.md"
+requires-python = ">=3.10"
+authors = [{name = "Example"}]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
