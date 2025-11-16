@@ -1,9 +1,9 @@
 from datetime import UTC, datetime, timedelta
 
 from security_dashboard import InMemoryEventSource, Severity, default_pipeline
+from security_dashboard.pretty import render_rich_dashboard
 
-
-def test_default_pipeline_generates_alerts_and_reports():
+def test_default_pipeline_generates_alerts_and_reports(rich_dashboard):
     now = datetime.now(UTC)
     events = [
         {
@@ -49,6 +49,11 @@ def test_default_pipeline_generates_alerts_and_reports():
     assert {report.type for report in result["reports"]} == {"event-summary", "incident-summary"}
     assert result["executed_actions"], "Expected automation actions to run"
 
+    if rich_dashboard:
+        from rich.console import Console
+        console = Console()
+        console.print() 
+        render_rich_dashboard(result)
 
 def test_pipeline_event_normalization_handles_missing_fields():
     now = datetime.now(UTC)
