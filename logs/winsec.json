@@ -1,0 +1,702 @@
+﻿[
+    {
+        "TimeCreated":  "\/Date(1763277534544)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534544)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534544)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534528)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534527)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534527)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534526)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534526)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534525)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534519)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534519)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534513)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534513)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534513)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534511)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534511)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534510)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534434)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277534434)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277533455)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277533455)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277281484)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763277281484)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763276430213)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763276430213)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763276426509)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763276426509)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763276381402)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763276381402)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275733683)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275733683)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275732827)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275732827)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275585892)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275585892)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275585702)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275585702)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275481305)\/",
+        "Id":  4672,
+        "LevelDisplayName":  "정보",
+        "Message":  "특수 권한을 새 로그온에 할당했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n권한:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275481305)\/",
+        "Id":  4624,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정이 성공적으로 로그온되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tDESKTOP-93NV55M$\r\n\t계정 도메인:\t\tWORKGROUP\r\n\t로그온 ID:\t\t0x3E7\r\n\r\n로그온 정보:\r\n\t로그온 유형:\t\t5\r\n\t제한된 관리 모드:\t-\r\n\t원격 자격 증명 보호:\t-\r\n\t가상 계정:\t\t아니요\r\n\t상승된 토큰:\t\t예\r\n\r\n가장 수준:\t\t가장\r\n\r\n새 로그온:\r\n\t보안 ID:\t\tS-1-5-18\r\n\t계정 이름:\t\tSYSTEM\r\n\t계정 도메인:\t\tNT AUTHORITY\r\n\t로그온 ID:\t\t0x3E7\r\n\t연결된 로그온 ID:\t\t0x0\r\n\t네트워크 계정 이름:\t-\r\n\t네트워크 계정 도메인:\t-\r\n\t로그온 GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x5fc\r\n\t프로세스 이름:\t\tC:\\Windows\\System32\\services.exe\r\n\r\n네트워크 정보:\r\n\t워크스테이션 이름:\t-\r\n\t원본 네트워크 주소:\t-\r\n\t원본 포트:\t\t-\r\n\r\n인증 세부 정보:\r\n\t로그온 프로세스:\t\tAdvapi  \r\n\t인증 패키지:\tNegotiate\r\n\t전송된 서비스:\t-\r\n\t패키지 이름(NTLM 전용):\t-\r\n\t키 길이:\t\t0\r\n\r\n이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.\r\n\r\n주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.\r\n\r\n로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.\r\n\r\n새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.\r\n\r\n네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.\r\n\r\n가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.\r\n\r\n인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.\r\n\t- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.\r\n\t - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.\r\n\t - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.\r\n\t - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275030747)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 읽기\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275030557)\/",
+        "Id":  4798,
+        "LevelDisplayName":  "정보",
+        "Message":  "사용자의 로컬 그룹 구성원이 열거되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\r\n사용자:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0x15374\r\n\t프로세스 이름:\t\tC:\\Program Files\\Git\\usr\\bin\\sh.exe",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275030287)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275030281)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763275029854)\/",
+        "Id":  4798,
+        "LevelDisplayName":  "정보",
+        "Message":  "사용자의 로컬 그룹 구성원이 열거되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\r\n사용자:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0xd3cc\r\n\t프로세스 이름:\t\tC:\\Program Files\\Git\\usr\\bin\\sh.exe",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274989653)\/",
+        "Id":  4797,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정의 빈 암호가 존재하는지 쿼리하려고 했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\r\n추가 정보:\r\n\t호출 워크스테이션:\tDESKTOP-93NV55M\r\n\t대상 계정 이름:\tWDAGUtilityAccount\r\n\t대상 계정 도메인:\tDESKTOP-93NV55M",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274989652)\/",
+        "Id":  4797,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정의 빈 암호가 존재하는지 쿼리하려고 했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\r\n추가 정보:\r\n\t호출 워크스테이션:\tDESKTOP-93NV55M\r\n\t대상 계정 이름:\tGuest\r\n\t대상 계정 도메인:\tDESKTOP-93NV55M",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274989651)\/",
+        "Id":  4797,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정의 빈 암호가 존재하는지 쿼리하려고 했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\r\n추가 정보:\r\n\t호출 워크스테이션:\tDESKTOP-93NV55M\r\n\t대상 계정 이름:\tDefaultAccount\r\n\t대상 계정 도메인:\tDESKTOP-93NV55M",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274989650)\/",
+        "Id":  4797,
+        "LevelDisplayName":  "정보",
+        "Message":  "계정의 빈 암호가 존재하는지 쿼리하려고 했습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\r\n추가 정보:\r\n\t호출 워크스테이션:\tDESKTOP-93NV55M\r\n\t대상 계정 이름:\tAdministrator\r\n\t대상 계정 도메인:\tDESKTOP-93NV55M",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985884)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985884)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985884)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985884)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985883)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985883)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985883)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985883)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985882)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985882)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985882)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985882)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985881)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985881)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985859)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985859)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985856)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985856)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274985855)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274978415)\/",
+        "Id":  4798,
+        "LevelDisplayName":  "정보",
+        "Message":  "사용자의 로컬 그룹 구성원이 열거되었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\r\n사용자:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\r\n프로세스 정보:\r\n\t프로세스 ID:\t\t0xb00c\r\n\t프로세스 이름:\t\tC:\\Windows\\explorer.exe",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963651)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963651)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963651)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963651)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963650)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963650)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963650)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963650)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963649)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963649)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963649)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963649)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963649)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963648)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963636)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963636)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963635)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963635)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963635)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963635)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963634)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963634)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963634)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963634)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963633)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963633)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963633)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963633)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963633)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963627)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963627)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    },
+    {
+        "TimeCreated":  "\/Date(1763274963626)\/",
+        "Id":  5379,
+        "LevelDisplayName":  "정보",
+        "Message":  "자격 증명 관리자 자격 증명을 읽었습니다.\r\n\r\n주체:\r\n\t보안 ID:\t\tS-1-5-21-1664516780-2281271228-2850272716-1001\r\n\t계정 이름:\t\tWIN11\r\n\t계정 도메인:\t\tDESKTOP-93NV55M\r\n\t로그온 ID:\t\t0xB8F6D08\r\n\t읽기 작업:\t\t자격 증명 열거\r\n\r\n이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.",
+        "MachineName":  "DESKTOP-93NV55M"
+    }
+]

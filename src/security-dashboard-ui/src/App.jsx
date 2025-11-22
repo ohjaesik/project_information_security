@@ -3,7 +3,33 @@ import {BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer} from 
 
 const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000"
 
+async function runPipeline() {
+  setLoading(true);
+  setError("");
 
+  try {
+    const res = await fetch(`${API_BASE}/run-pipeline`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      // ⚠ 여기 중요: { events } 말고, events 배열 자체를 보낸다
+      body: JSON.stringify(events),
+    });
+
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({}));
+      console.error("Server error:", res.status, errBody);
+      throw new Error(`HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    setResult(data);
+  } catch (e) {
+    console.error(e);
+    setError(String(e));
+  } finally {
+    setLoading(false);
+  }
+}
 const sampleEvents = () => {
   const now = new Date();
   const iso = (m) => new Date(now.getTime() - m * 60000).toISOString();
@@ -131,14 +157,14 @@ export default function App(){
                 <h2 className= "font-semibold mb-3">Alerts</h2>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
-                    <thred>
+                    <thead>
                       <tr className="text-left border-b">
                         <th className="py-2">id</th>
                         <th>rule</th>
                         <th>severity</th>
                         <th>events</th>
                       </tr>
-                    </thred>
+                    </thead>
                     <tbody>
                     {result.alerts?.map((a, i) => (
                       <tr key={i} className="border-b last:border-0">
