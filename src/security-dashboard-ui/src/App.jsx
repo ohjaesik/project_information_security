@@ -85,11 +85,25 @@ export default function App(){
   };
 
   const severityChartData = useMemo(() => {
-    if (!result) return [];
-    const assets = result?.report?.find(r => r.type === "event-summary")?.findings?.assets || {};
-    return Object.entries(assets).map(([asset, info]) => ({asset, ...info.serverities}));
+    if (!result || !result.events) return [];
 
+  // asset_id + severity 기준으로 직접 집계
+    const byAsset = {};
+
+    for (const e of result.events) {
+      const asset = e.asset_id || "unknown";
+      const sev = (e.severity || "low").toLowerCase();
+      if (!byAsset[asset]) {
+      byAsset[asset] = { asset, low: 0, medium: 0, high: 0, critical: 0 };
+      }
+      if (["low", "medium", "high", "critical"].includes(sev)) {
+        byAsset[asset][sev] += 1;
+      }
+    }
+
+    return Object.values(byAsset);
   }, [result]);
+
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
@@ -234,6 +248,103 @@ export default function App(){
             </section>
           </>
         )}
+        {result?.risk?.summary && (
+          <section className="bg-white rounded-2xl shadow p-4">
+            <h2 className="font-semibold mb-3">Risk Summary</h2>
+            <div className="flex gap-6 text-sm">
+              <div>
+                <div className="text-gray-500">Max Incident Risk</div>
+                <div className="text-2xl font-bold">{result.risk.summary.max_score}</div>
+              </div>
+              <div>
+                <div className="text-gray-500">Average Incident Risk</div>
+                <div className="text-2xl font-bold">{result.risk.summary.avg_score}</div>
+              </div>
+              <div>
+                <div className="text-gray-500">High Risk Incidents</div>
+                <div>{result.risk.summary.high_risk_incidents.join(", ") || "-"}</div>
+              </div>
+            </div>
+          </section>
+        )}
+        {result?.risk?.incidents && result.risk.incidents.length > 0 && (
+          <section className="bg-white rounded-2xl shadow p-4">
+          <h2 className="font-semibold mb-3">Incident Risk Scores</h2>
+          <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b text-left">
+              <th className="py-2">Incident ID</th>
+              <th>Score</th>
+              <th>Reasons</th>
+            </tr>
+          </thead>
+          <tbody>
+            {result.risk.incidents.map((s, i) => (
+              <tr key={i} className="border-b last:border-0">
+                <td className="py-1 pr-2">{s.id}</td>
+                <td className="pr-2">{s.score}</td>
+                <td className="pr-2">{(s.reasons || []).join("; ")}</td>
+              </tr>
+            ))}
+          </tbody>
+          </table>
+          </section>
+          )}
+          {result?.anomalies && (
+          <section className="bg-white rounded-2xl shadow p-4">
+          <h2 className="font-semibold mb-3">Anomalies</h2>
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+          <div>
+            <h3 className="font-semibold mb-2">Rule-based</h3>
+            <ul className="space-y-1 max-h-48 overflow-auto">
+            {result.anomalies.rule_based.map((a, i) => (
+            <li key={i}>
+              <span className={a.is_anomaly ? "text-red-600 font-semibold" : "text-gray-500"}>
+                [{a.is_anomaly ? "ANOMALY" : "normal"}]
+              </span>{" "}
+              {a.id} – score: {a.score.toFixed ? a.score.toFixed(2) : a.score}
+            </li>
+            ))}
+            </ul>
+          </div>
+          <div>
+          <h3 className="font-semibold mb-2">Isolation Forest</h3>
+          <ul className="space-y-1 max-h-48 overflow-auto">
+          {result.anomalies.isolation_forest.map((a, i) => (
+            <li key={i}>
+              <span className={a.is_anomaly ? "text-red-600 font-semibold" : "text-gray-500"}>
+                [{a.is_anomaly ? "ANOMALY" : "normal"}]
+              </span>{" "}
+              {a.id} – score: {a.score.toFixed ? a.score.toFixed(2) : a.score}
+            </li>
+          ))}
+          </ul>
+          </div>
+          </div>
+          </section>
+          )}
+          {result?.recommendations && result.recommendations.length > 0 && (
+          <section className="bg-white rounded-2xl shadow p-4">
+          <h2 className="font-semibold mb-3">Response Recommendations</h2>
+          <div className="space-y-3 text-sm">
+          {result.recommendations.map((r, i) => (
+          <div key={i} className="border rounded-xl p-3">
+            <div className="font-semibold mb-1">{r.title}</div>
+            <div className="text-gray-600 mb-1">{r.description}</div>
+            <ul className="list-disc pl-5">
+              {(r.actions || []).map((a, j) => (
+                <li key={j}>{a}</li>
+              ))}
+            </ul>
+          </div>
+          ))}
+          </div>
+          </section>
+)}
+
+
+
       </div>
+      
       );
 }
