@@ -1,7 +1,9 @@
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 from datetime import datetime
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from dataclasses import asdict, is_dataclass
 
 from security_dashboard import InMemoryEventSource, default_pipeline
 from security_dashboard.anomalies import (
@@ -11,8 +13,6 @@ from security_dashboard.anomalies import (
 from security_dashboard.risk import RiskScorer
 from security_dashboard.scenarios import list_scenarios, run_scenario
 from security_dashboard.notifications import build_recommendations
-from dataclasses import asdict, is_dataclass
-
 
 app = FastAPI(title="Security Dashboard API", version="0.2.0")
 app.add_middleware(
@@ -22,6 +22,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# collector가 돌린 "실시간" 결과를 저장
+last_result: Optional[Dict[str, Any]] = None
 
 
 def to_jsonable(obj: Any) -> Any:
@@ -37,11 +40,10 @@ def to_jsonable(obj: Any) -> Any:
     return obj
 
 
-@app.post("/run-pipeline")
-def run_pipeline(events: List[Dict[str, Any]]) -> Dict[str, Any]:
+def run_pipeline_core(events: List[Dict[str, Any]]) -> Dict[str, Any]:
     """
-    프론트/수집기에서 넘어온 이벤트 dict 리스트를 그대로 받아서
-    파이프라인 실행 + 이상탐지 + RiskScore + 대응 권고까지 붙여서 반환.
+    공통 파이프라인 실행 + 이상탐지 + RiskScore + 대응 권고까지 묶은 함수.
+    /run-pipeline (데이터셋용), /ingest-logs (collector용) 에서 공통 사용.
     """
     pipeline = default_pipeline(InMemoryEventSource(events))
     result = pipeline.run()
@@ -50,7 +52,7 @@ def run_pipeline(events: List[Dict[str, Any]]) -> Dict[str, Any]:
     alerts_out = result.get("alerts", [])
     incidents_out = result.get("incidents", [])
 
-    # 1) 이상 탐지 (규칙 + IsolationForest)
+    # 1) 이상 탐지
     rule_detector = RuleBasedAnomalyDetector()
     iso_detector = IsolationForestAnomalyDetector()
 
@@ -90,12 +92,9 @@ def run_pipeline(events: List[Dict[str, Any]]) -> Dict[str, Any]:
     return enriched
 
 
-# 1.2.1: Filebeat/Fluentd 등에서 JSON 로그를 바로 보낼 수 있는 엔드포인트 (v1: 메모리 처리)
-@app.post("/ingest-logs")
-def ingest_logs(logs: List[Dict[str, Any]]) -> Dict[str, Any]:
+def normalize_logs(logs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
-    Filebeat/Fluentd에서 HTTP JSON 배열로 로그 전송한다고 가정하고,
-    logs를 pipeline이 기대하는 이벤트 dict 형태로 매핑해서 실행.
+    collector가 보내는 원시 로그 → 파이프라인용 이벤트 dict로 정규화.
     """
     events: List[Dict[str, Any]] = []
     for i, log in enumerate(logs, start=1):
@@ -111,12 +110,31 @@ def ingest_logs(logs: List[Dict[str, Any]]) -> Dict[str, Any]:
             "dataset": log.get("dataset"),
         }
         events.append(ev)
-
-    # run_pipeline은 List[Dict[str, Any]] 그대로 받도록 되어 있으므로 재사용
-    return run_pipeline(events)
+    return events
 
 
-# 1.2.2: 디지털 트윈 / 워게이밍 시나리오
+# 1) 데이터셋 / 시나리오 / UI 테스트용: last_result 갱신 안 함
+@app.post("/run-pipeline")
+def run_pipeline(events: List[Dict[str, Any]]) -> Dict[str, Any]:
+    return run_pipeline_core(events)
+
+
+# 2) collector(실시간)용: 여기서만 last_result 갱신
+@app.post("/ingest-logs")
+def ingest_logs(logs: List[Dict[str, Any]]) -> Dict[str, Any]:
+    global last_result
+    events = normalize_logs(logs)
+    last_result = run_pipeline_core(events)
+    return last_result
+
+
+# 3) 실시간 결과 조회용: UI가 polling
+@app.get("/last-result")
+def get_last_result() -> Dict[str, Any]:
+    return last_result or {}
+
+
+# 시나리오 관련 API
 @app.get("/scenarios")
 def get_scenarios():
     return list_scenarios()

@@ -25,6 +25,7 @@ class RiskScorer:
         asset = getattr(event, "asset_id", "unknown")
         category = getattr(event, "category", "unknown")
 
+        # severity 기반 기본 가중치
         if sev:
             sev_val = str(getattr(sev, "value", sev)).lower()
             if sev_val == "critical":
@@ -40,15 +41,24 @@ class RiskScorer:
                 score += 5
                 reasons.append("Low severity")
 
+        # 인증/계정 관련 이벤트
         if category in ("auth", "identity"):
             score += 15
             reasons.append("Authentication related event")
 
-        if "prod" in asset.lower():
+        # Windows / auth 로그에서 failed_attempts 반영
+        raw = getattr(event, "raw_payload", {}) or {}
+        failed = raw.get("failed_attempts")
+        if isinstance(failed, int) and failed >= 5:
+            score += 20
+            reasons.append(f"High number of failed attempts ({failed})")
+
+        # 프로덕션 자산
+        if isinstance(asset, str) and "prod" in asset.lower():
             score += 10
             reasons.append("Production asset")
 
-        score = max(0, min(100, score))
+        score = int(max(0, min(100, score)))
         return RiskScore(id=getattr(event, "id", ""), score=score, reasons=reasons)
 
     def score_alert(self, alert: Any) -> RiskScore:
@@ -72,33 +82,38 @@ class RiskScorer:
                 reasons.append("Low alert")
 
         # 인시던트와 연계되면 추가 가중치 줄 수도 있음 (v2)
-        score = max(0, min(100, score))
+        score = int(max(0, min(100, score)))
         return RiskScore(id=getattr(alert, "id", ""), score=score, reasons=reasons)
 
     def score_incident(self, incident: Any) -> RiskScore:
+        """
+        Incident.priority 는 Severity(low/medium/high/critical)이므로
+        그 기준으로 점수 매핑.
+        """
         reasons: List[str] = []
         score = 0
 
         priority = getattr(incident, "priority", None)
         if priority:
             p_val = str(getattr(priority, "value", priority)).lower()
-            if p_val == "p1":
+            if p_val == "critical":
                 score += 80
-                reasons.append("P1 incident")
-            elif p_val == "p2":
+                reasons.append("Critical incident")
+            elif p_val == "high":
                 score += 60
-                reasons.append("P2 incident")
-            elif p_val == "p3":
+                reasons.append("High priority incident")
+            elif p_val == "medium":
                 score += 40
-                reasons.append("P3 incident")
+                reasons.append("Medium priority incident")
             else:
-                score += 15
+                score += 20
                 reasons.append("Low priority incident")
 
         if getattr(incident, "assignee", None):
+            score += 5
             reasons.append("Assigned to operator")
 
-        score = max(0, min(100, score))
+        score = int(max(0, min(100, score)))
         return RiskScore(id=getattr(incident, "id", ""), score=score, reasons=reasons)
 
     def build_risk_summary(self, incident_scores: List[RiskScore]) -> Dict[str, Any]:
@@ -117,7 +132,7 @@ class RiskScorer:
         high_risk = [s.id for s in incident_scores if s.score >= 70]
 
         return {
-            "max_score": max_score,
+            "max_score": int(max_score),
             "avg_score": round(avg_score, 1),
             "high_risk_incidents": high_risk,
         }

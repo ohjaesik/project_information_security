@@ -1,124 +1,252 @@
-import { useEffect, useMemo, useState } from "react";
-import {BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer} from "recharts";
+import { useEffect, useMemo, useState, useRef } from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000"
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
 
-async function runPipeline() {
-  setLoading(true);
-  setError("");
-
-  try {
-    const res = await fetch(`${API_BASE}/run-pipeline`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      // ⚠ 여기 중요: { events } 말고, events 배열 자체를 보낸다
-      body: JSON.stringify(events),
-    });
-
-    if (!res.ok) {
-      const errBody = await res.json().catch(() => ({}));
-      console.error("Server error:", res.status, errBody);
-      throw new Error(`HTTP ${res.status}`);
-    }
-
-    const data = await res.json();
-    setResult(data);
-  } catch (e) {
-    console.error(e);
-    setError(String(e));
-  } finally {
-    setLoading(false);
-  }
-}
 const sampleEvents = () => {
   const now = new Date();
   const iso = (m) => new Date(now.getTime() - m * 60000).toISOString();
-  return[
-    {id: 'evt-1', source: "ids", asset_id: "srv-1", serverity: "critical", category:"network", timestamp: iso(1)},
-    {id: 'evt-2', source: "auth", asset_id: "srv-2", serverity: "medium", category:"auth", timestamp: iso(2), failed_attempts: 6},
-    { id: "evt-3", source: "auth", asset_id: "srv-2", serverity: "high", category: "auth", timestamp: iso(3), failed_attempts: 8 },
-    { id: "evt-4", source: "ids", asset_id: "srv-2", serverity: "low", category: "network", timestamp: iso(4) },
+  return [
+    {
+      id: "evt-1",
+      source: "ids",
+      asset_id: "srv-1",
+      severity: "critical",  
+      category: "network",
+      timestamp: iso(1),
+    },
+    {
+      id: "evt-2",
+      source: "auth",
+      asset_id: "srv-2",
+      severity: "medium",
+      category: "auth",
+      timestamp: iso(2),
+      failed_attempts: 6,
+    },
+    {
+      id: "evt-3",
+      source: "auth",
+      asset_id: "srv-2",
+      severity: "high",
+      category: "auth",
+      timestamp: iso(3),
+      failed_attempts: 8,
+    },
+    {
+      id: "evt-4",
+      source: "ids",
+      asset_id: "srv-2",
+      severity: "low",
+      category: "network",
+      timestamp: iso(4),
+    },
   ];
 };
 
-export default function App(){
+
+export default function App() {
   const [events, setEvents] = useState(sampleEvents());
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
-  const [error, setError] = useState(" ");
+  const [error, setError] = useState("");
+const fileInputRef = useRef(null);
+
+  const handleUploadJsonClick = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ""; // 같은 파일 다시 선택 가능하도록 초기화
+      fileInputRef.current.click();
+    }
+  };
+
+  const handleUploadJsonChange = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const text = ev.target.result;
+        const parsed = JSON.parse(text);
+
+        // 업로드 형식: [ { id, asset_id, severity, ... }, ... ] 기준
+        if (!Array.isArray(parsed)) {
+          setError("JSON 최상위는 배열이어야 합니다.");
+          return;
+        }
+
+        setEvents(parsed);
+        setError("");
+        setResult(null); // 이전 결과 클리어
+      } catch (err) {
+        setError(`JSON 파싱 오류: ${String(err)}`);
+      }
+    };
+    reader.readAsText(file);
+  };
 
   const runPipeline = async () => {
-    setLoading(true); setError(" ");
+    setLoading(true);
+    setError("");
+    setResult(null);
+
     try {
       const res = await fetch(`${API_BASE}/run-pipeline`, {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(events),
       });
-      if(!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
+
+      const text = await res.text();
+      if (!res.ok) {
+        setError(`HTTP ${res.status}: ${text}`);
+        return;
+      }
+
+      const data = JSON.parse(text || "{}");
       setResult(data);
-    } catch (e){
-      setError(String(e));
+      if (data.events) {
+        setEvents(data.events);
+      }
+    } catch (e) {
+      setError(`fetch failed: ${String(e)}`);
     } finally {
       setLoading(false);
     }
   };
 
+const fetchLatest = async () => {
+  try {
+    const res = await fetch(`${API_BASE}/last-result`, {
+      method: "GET",
+    });
+    const text = await res.text();
+    if (!res.ok) {
+      console.warn("run-pipeline error", res.status, text);
+      return;
+    }
+    if (!text) return;
+
+    const data = JSON.parse(text);
+    if (!data.events) return;
+
+    // 🔥 여기서 UI 전체를 Windows 기반 결과로 동기화
+    setResult(data);
+    setEvents(data.events);
+  } catch (e) {
+    console.warn("fetchLatest failed", e);
+  }
+};
+  useEffect(() => {
+  // 컴포넌트 마운트 시 바로 한 번 가져오고
+  fetchLatest();
+}, []);
+
+
+
+
   const addEvent = () => {
-    setEvents((evts) => ([...evts, {
-      id: `evt-${evts.length + 1}`,
-      asset_id: "srv-1",
-      severity: "medium",
-      category: "auth",
-      timestamp: new Date().toISOStirng(),
-      source: "auth", 
-    }]));
+    setEvents((evts) => [
+      ...evts,
+      {
+        id: `evt-${evts.length + 1}`,
+        asset_id: "srv-1",
+        severity: "medium",
+        category: "auth",
+        timestamp: new Date().toISOString(), // ✅ toISOStirng → toISOString
+        source: "auth",
+      },
+    ]);
   };
 
   const removeEvent = (idx) => {
-    setEvents((evts) => evts.filter((_, i) => i != idx));
+    setEvents((evts) => evts.filter((_, i) => i !== idx));
   };
 
   const updateEvent = (idx, field, value) => {
-    setEvents((evts) => evts.map((e, i) => i == idx ? {...e, [field]: value} :e));
+    setEvents((evts) =>
+      evts.map((e, i) => (i === idx ? { ...e, [field]: value } : e)),
+    );
   };
 
+  // 그래프 데이터: 항상 "현재 result.events" 기준으로 집계
   const severityChartData = useMemo(() => {
     if (!result || !result.events) return [];
-
-  // asset_id + severity 기준으로 직접 집계
     const byAsset = {};
-
     for (const e of result.events) {
       const asset = e.asset_id || "unknown";
       const sev = (e.severity || "low").toLowerCase();
       if (!byAsset[asset]) {
-      byAsset[asset] = { asset, low: 0, medium: 0, high: 0, critical: 0 };
+        byAsset[asset] = {
+          asset,
+          low: 0,
+          medium: 0,
+          high: 0,
+          critical: 0,
+        };
       }
       if (["low", "medium", "high", "critical"].includes(sev)) {
         byAsset[asset][sev] += 1;
       }
     }
-
     return Object.values(byAsset);
   }, [result]);
-
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-bold">Security Dashboard — UI MVP</h1>
-  
+
       <section className="bg-white rounded-2xl shadow p-4">
         <div className="flex items-center justify-between mb-3">
           <h2 className="font-semibold">Events</h2>
           <div className="space-x-2">
-            <button onClick={addEvent} className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200">+ Add</button>
-            <button onClick={() => setEvents(sampleEvents())} className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200">Reset Sample</button>
-            <button onClick={runPipeline} disabled={loading} className="px-3 py-1 rounded bg-black text-white disabled:opacity-50">{loading ? "Running..." : "Run Pipeline"}</button>
+            <button
+              onClick={addEvent}
+              className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200"
+            >
+              + Add
+            </button>
+            <button
+              onClick={handleUploadJsonClick}
+              className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200"
+            >
+              Load JSON
+            </button>
+            <input
+              ref={fileInputRef}
+              type="file" 
+              accept=".json,application/json"
+              className="hidden"
+              onChange={handleUploadJsonChange}
+            />
+            <button
+              onClick={runPipeline}
+              disabled={loading}
+              className="px-3 py-1 rounded bg-black text-white disabled:opacity-50"
+            >
+              {loading ? "Running..." : "Run Pipeline"}
+            </button>
+            <button
+              onClick={fetchLatest}
+              className="px-3 py-1 rounded bg-indigo-600 text-white"
+            >
+              Load DeskTop Logs
+            </button>
           </div>
         </div>
-        {error && <div className="text-red-600 text-sm mb-2">{error}</div>}
+        {error && (
+          <div className="text-red-600 text-sm mb-2 whitespace-pre-wrap">
+            {error}
+          </div>
+        )}
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -136,10 +264,32 @@ export default function App(){
             <tbody>
               {events.map((e, idx) => (
                 <tr key={idx} className="border-b last:border-0">
-                  <td className="py-1 pr-2"><input className="w-28" value={e.id} onChange={ev => updateEvent(idx, "id", ev.target.value)} /></td>
-                  <td className="pr-2"><input className="w-20" value={e.asset_id} onChange={ev => updateEvent(idx, "asset_id", ev.target.value)} /></td>
+                  <td className="py-1 pr-2">
+                    <input
+                      className="w-28"
+                      value={e.id}
+                      onChange={(ev) =>
+                        updateEvent(idx, "id", ev.target.value)
+                      }
+                    />
+                  </td>
                   <td className="pr-2">
-                    <select className="w-28" value={e.severity} onChange={ev => updateEvent(idx, "severity", ev.target.value)}>
+                    <input
+                      className="w-20"
+                      value={e.asset_id}
+                      onChange={(ev) =>
+                        updateEvent(idx, "asset_id", ev.target.value)
+                      }
+                    />
+                  </td>
+                  <td className="pr-2">
+                    <select
+                      className="w-28"
+                      value={e.severity || "low"}
+                      onChange={(ev) =>
+                        updateEvent(idx, "severity", ev.target.value)
+                      }
+                    >
                       <option>low</option>
                       <option>medium</option>
                       <option>high</option>
@@ -147,16 +297,57 @@ export default function App(){
                     </select>
                   </td>
                   <td className="pr-2">
-                    <select className="w-28" value={e.category} onChange={ev => updateEvent(idx, "category", ev.target.value)}>
+                    <select
+                      className="w-28"
+                      value={e.category || "network"}
+                      onChange={(ev) =>
+                        updateEvent(idx, "category", ev.target.value)
+                      }
+                    >
                       <option>network</option>
                       <option>auth</option>
                       <option>system</option>
                     </select>
                   </td>
-                  <td className="pr-2"><input className="w-64" value={e.timestamp} onChange={ev => updateEvent(idx, "timestamp", ev.target.value)} /></td>
-                  <td className="pr-2"><input className="w-24" value={e.source || ""} onChange={ev => updateEvent(idx, "source", ev.target.value)} /></td>
-                  <td className="pr-2"><input className="w-16" value={e.failed_attempts ?? ""} onChange={ev => updateEvent(idx, "failed_attempts", ev.target.value ? Number(ev.target.value) : undefined)} /></td>
-                  <td><button onClick={() => removeEvent(idx)} className="px-2 py-1 text-red-600">삭제</button></td>
+                  <td className="pr-2">
+                    <input
+                      className="w-64"
+                      value={e.timestamp}
+                      onChange={(ev) =>
+                        updateEvent(idx, "timestamp", ev.target.value)
+                      }
+                    />
+                  </td>
+                  <td className="pr-2">
+                    <input
+                      className="w-24"
+                      value={e.source || ""}
+                      onChange={(ev) =>
+                        updateEvent(idx, "source", ev.target.value)
+                      }
+                    />
+                  </td>
+                  <td className="pr-2">
+                    <input
+                      className="w-16"
+                      value={e.failed_attempts ?? ""}
+                      onChange={(ev) =>
+                        updateEvent(
+                          idx,
+                          "failed_attempts",
+                          ev.target.value ? Number(ev.target.value) : undefined,
+                        )
+                      }
+                    />
+                  </td>
+                  <td>
+                    <button
+                      onClick={() => removeEvent(idx)}
+                      className="px-2 py-1 text-red-600"
+                    >
+                      삭제
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -164,187 +355,215 @@ export default function App(){
         </div>
       </section>
 
-        {result && (
-          <>
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-2xl shadow p-4">
-                <h2 className= "font-semibold mb-3">Alerts</h2>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="text-left border-b">
-                        <th className="py-2">id</th>
-                        <th>rule</th>
-                        <th>severity</th>
-                        <th>events</th>
-                      </tr>
-                    </thead>
-                    <tbody>
+      {result && (
+        <>
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-2xl shadow p-4">
+              <h2 className="font-semibold mb-3">Alerts</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left border-b">
+                      <th className="py-2">id</th>
+                      <th>rule</th>
+                      <th>severity</th>
+                      <th>events</th>
+                    </tr>
+                  </thead>
+                  <tbody>
                     {result.alerts?.map((a, i) => (
                       <tr key={i} className="border-b last:border-0">
                         <td className="py-1 pr-2">{a.id}</td>
                         <td className="pr-2">{a.rule_id}</td>
                         <td className="pr-2">{a.severity}</td>
-                        <td className="pr-2">{a.event_ids?.join(", ")}</td>
+                        <td className="pr-2">
+                          {a.event_ids?.join(", ")}
+                        </td>
                       </tr>
                     ))}
-                    </tbody>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
               </div>
+            </div>
 
-              <div className="bg-white rounded-2xl shadow p-4">
-                <h2 className="font-semibold mb-3">incidents</h2>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="text-left border-b">
-                        <th className="py-2">id</th>
-                        <th>priority</th>
-                        <th>assignee</th>
-                        <th>resolution</th>
-                        <th>alerts</th>
-                      </tr>
-                    </thead>
-                    <tbody>
+            <div className="bg-white rounded-2xl shadow p-4">
+              <h2 className="font-semibold mb-3">incidents</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left border-b">
+                      <th className="py-2">id</th>
+                      <th>priority</th>
+                      <th>assignee</th>
+                      <th>resolution</th>
+                      <th>alerts</th>
+                    </tr>
+                  </thead>
+                  <tbody>
                     {result.incidents?.map((inc, i) => (
                       <tr key={i} className="border-b last:border-0">
                         <td className="py-1 pr-2">{inc.id}</td>
                         <td className="pr-2">{inc.priority}</td>
                         <td className="pr-2">{inc.assignee || "-"}</td>
                         <td className="pr-2">{inc.resolution || "-"}</td>
-                        <td className="pr-2">{Array.from(inc.alert_ids || []).join(",")}</td>
+                        <td className="pr-2">
+                          {Array.from(inc.alert_ids || []).join(",")}
+                        </td>
                       </tr>
                     ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </section>
-
-            <section className="bg-white rounded-2xl shadow p-4">
-              <h2 className="font-semibold mb-3">Event Summary</h2>
-              <div className="h-72">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={severityChartData}>
-                    <XAxis dataKey="asset" />
-                    <YAxis />
-                    <Legend />
-                    <Bar dataKey="low" stackId="sev" />
-                    <Bar dataKey="medium" stackId="sev"/>
-                    <Bar dataKey="high" stackId="sev"/>
-                    <Bar dataKey="critical" stackId="sev"/>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </section>
-            <section className="bg-white rounded-2xl shadow p-4">
-              <h2 className="font-semibold mb-3">Executed Actions</h2>
-              <ul className="list-disc pl-6">
-                {result.executed_actions?.map((a, i) => (
-                  <li key={i}>{a}</li>
-                ))}
-              </ul>
-            </section>
-          </>
-        )}
-        {result?.risk?.summary && (
-          <section className="bg-white rounded-2xl shadow p-4">
-            <h2 className="font-semibold mb-3">Risk Summary</h2>
-            <div className="flex gap-6 text-sm">
-              <div>
-                <div className="text-gray-500">Max Incident Risk</div>
-                <div className="text-2xl font-bold">{result.risk.summary.max_score}</div>
-              </div>
-              <div>
-                <div className="text-gray-500">Average Incident Risk</div>
-                <div className="text-2xl font-bold">{result.risk.summary.avg_score}</div>
-              </div>
-              <div>
-                <div className="text-gray-500">High Risk Incidents</div>
-                <div>{result.risk.summary.high_risk_incidents.join(", ") || "-"}</div>
+                  </tbody>
+                </table>
               </div>
             </div>
           </section>
-        )}
-        {result?.risk?.incidents && result.risk.incidents.length > 0 && (
+
           <section className="bg-white rounded-2xl shadow p-4">
-          <h2 className="font-semibold mb-3">Incident Risk Scores</h2>
-          <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b text-left">
-              <th className="py-2">Incident ID</th>
-              <th>Score</th>
-              <th>Reasons</th>
-            </tr>
-          </thead>
-          <tbody>
-            {result.risk.incidents.map((s, i) => (
-              <tr key={i} className="border-b last:border-0">
-                <td className="py-1 pr-2">{s.id}</td>
-                <td className="pr-2">{s.score}</td>
-                <td className="pr-2">{(s.reasons || []).join("; ")}</td>
-              </tr>
-            ))}
-          </tbody>
-          </table>
+            <h2 className="font-semibold mb-3">Event Summary</h2>
+            <div className="h-72">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={severityChartData}>
+                  <XAxis dataKey="asset" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="low" stackId="sev" />
+                  <Bar dataKey="medium" stackId="sev" />
+                  <Bar dataKey="high" stackId="sev" />
+                  <Bar dataKey="critical" stackId="sev" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </section>
-          )}
-          {result?.anomalies && (
+
           <section className="bg-white rounded-2xl shadow p-4">
-          <h2 className="font-semibold mb-3">Anomalies</h2>
-          <div className="grid md:grid-cols-2 gap-4 text-sm">
-          <div>
-            <h3 className="font-semibold mb-2">Rule-based</h3>
-            <ul className="space-y-1 max-h-48 overflow-auto">
-            {result.anomalies.rule_based.map((a, i) => (
-            <li key={i}>
-              <span className={a.is_anomaly ? "text-red-600 font-semibold" : "text-gray-500"}>
-                [{a.is_anomaly ? "ANOMALY" : "normal"}]
-              </span>{" "}
-              {a.id} – score: {a.score.toFixed ? a.score.toFixed(2) : a.score}
-            </li>
-            ))}
-            </ul>
-          </div>
-          <div>
-          <h3 className="font-semibold mb-2">Isolation Forest</h3>
-          <ul className="space-y-1 max-h-48 overflow-auto">
-          {result.anomalies.isolation_forest.map((a, i) => (
-            <li key={i}>
-              <span className={a.is_anomaly ? "text-red-600 font-semibold" : "text-gray-500"}>
-                [{a.is_anomaly ? "ANOMALY" : "normal"}]
-              </span>{" "}
-              {a.id} – score: {a.score.toFixed ? a.score.toFixed(2) : a.score}
-            </li>
-          ))}
-          </ul>
-          </div>
-          </div>
-          </section>
-          )}
-          {result?.recommendations && result.recommendations.length > 0 && (
-          <section className="bg-white rounded-2xl shadow p-4">
-          <h2 className="font-semibold mb-3">Response Recommendations</h2>
-          <div className="space-y-3 text-sm">
-          {result.recommendations.map((r, i) => (
-          <div key={i} className="border rounded-xl p-3">
-            <div className="font-semibold mb-1">{r.title}</div>
-            <div className="text-gray-600 mb-1">{r.description}</div>
-            <ul className="list-disc pl-5">
-              {(r.actions || []).map((a, j) => (
-                <li key={j}>{a}</li>
+            <h2 className="font-semibold mb-3">Executed Actions</h2>
+            <ul className="list-disc pl-6">
+              {result.executed_actions?.map((a, i) => (
+                <li key={i}>{a}</li>
               ))}
             </ul>
-          </div>
-          ))}
-          </div>
           </section>
-)}
+        </>
+      )}
 
+      {result?.risk?.summary && (
+        <section className="bg-white rounded-2xl shadow p-4">
+          <h2 className="font-semibold mb-3">Risk Summary</h2>
+          <div className="flex gap-6 text-sm">
+            <div>
+              <div className="text-gray-500">Max Incident Risk</div>
+              <div className="text-2xl font-bold">
+                {result.risk.summary.max_score}
+              </div>
+            </div>
+            <div>
+              <div className="text-gray-500">Average Incident Risk</div>
+              <div className="text-2xl font-bold">
+                {result.risk.summary.avg_score}
+              </div>
+            </div>
+            <div>
+              <div className="text-gray-500">High Risk Incidents</div>
+              <div>
+                {result.risk.summary.high_risk_incidents.join(", ") || "-"}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
+      {result?.risk?.incidents && result.risk.incidents.length > 0 && (
+        <section className="bg-white rounded-2xl shadow p-4">
+          <h2 className="font-semibold mb-3">Incident Risk Scores</h2>
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b text-left">
+                <th className="py-2">Incident ID</th>
+                <th>Score</th>
+                <th>Reasons</th>
+              </tr>
+            </thead>
+            <tbody>
+              {result.risk.incidents.map((s, i) => (
+                <tr key={i} className="border-b last:border-0">
+                  <td className="py-1 pr-2">{s.id}</td>
+                  <td className="pr-2">{s.score}</td>
+                  <td className="pr-2">
+                    {(s.reasons || []).join("; ")}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
 
-      </div>
-      
-      );
+      {result?.anomalies && (
+        <section className="bg-white rounded-2xl shadow p-4">
+          <h2 className="font-semibold mb-3">Anomalies</h2>
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Rule-based</h3>
+              <ul className="space-y-1 max-h-48 overflow-auto">
+                {result.anomalies.rule_based.map((a, i) => (
+                  <li key={i}>
+                    <span
+                      className={
+                        a.is_anomaly
+                          ? "text-red-600 font-semibold"
+                          : "text-gray-500"
+                      }
+                    >
+                      [{a.is_anomaly ? "ANOMALY" : "normal"}]
+                    </span>{" "}
+                    {a.id} – score:{" "}
+                    {a.score.toFixed ? a.score.toFixed(2) : a.score}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Isolation Forest</h3>
+              <ul className="space-y-1 max-h-48 overflow-auto">
+                {result.anomalies.isolation_forest.map((a, i) => (
+                  <li key={i}>
+                    <span
+                      className={
+                        a.is_anomaly
+                          ? "text-red-600 font-semibold"
+                          : "text-gray-500"
+                      }
+                    >
+                      [{a.is_anomaly ? "ANOMALY" : "normal"}]
+                    </span>{" "}
+                    {a.id} – score:{" "}
+                    {a.score.toFixed ? a.score.toFixed(2) : a.score}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {result?.recommendations && result.recommendations.length > 0 && (
+        <section className="bg-white rounded-2xl shadow p-4">
+          <h2 className="font-semibold mb-3">Response Recommendations</h2>
+          <div className="space-y-3 text-sm">
+            {result.recommendations.map((r, i) => (
+              <div key={i} className="border rounded-xl p-3">
+                <div className="font-semibold mb-1">{r.title}</div>
+                <div className="text-gray-600 mb-1">{r.description}</div>
+                <ul className="list-disc pl-5">
+                  {(r.actions || []).map((a, j) => (
+                    <li key={j}>{a}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
 }

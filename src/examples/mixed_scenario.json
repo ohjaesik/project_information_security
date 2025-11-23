@@ -1,0 +1,56 @@
+[
+  {
+    "id": "evt-20",
+    "asset_id": "api-gw-1",
+    "severity": "low",
+    "category": "network",
+    "timestamp": "2025-11-23T11:00:00Z",
+    "source": "nginx",
+    "failed_attempts": 0
+  },
+  {
+    "id": "evt-21",
+    "asset_id": "api-gw-1",
+    "severity": "medium",
+    "category": "network",
+    "timestamp": "2025-11-23T11:00:05Z",
+    "source": "nginx",
+    "failed_attempts": 0
+  },
+  {
+    "id": "evt-22",
+    "asset_id": "api-gw-1",
+    "severity": "high",
+    "category": "network",
+    "timestamp": "2025-11-23T11:00:10Z",
+    "source": "nginx",
+    "failed_attempts": 0
+  },
+  {
+    "id": "evt-23",
+    "asset_id": "win-prod-3",
+    "severity": "medium",
+    "category": "auth",
+    "timestamp": "2025-11-23T11:01:00Z",
+    "source": "windows",
+    "failed_attempts": 4
+  },
+  {
+    "id": "evt-24",
+    "asset_id": "win-prod-3",
+    "severity": "high",
+    "category": "auth",
+    "timestamp": "2025-11-23T11:01:20Z",
+    "source": "windows",
+    "failed_attempts": 6
+  },
+  {
+    "id": "evt-25",
+    "asset_id": "win-prod-3",
+    "severity": "low",
+    "category": "system",
+    "timestamp": "2025-11-23T11:03:00Z",
+    "source": "windows",
+    "failed_attempts": 0
+  }
+]

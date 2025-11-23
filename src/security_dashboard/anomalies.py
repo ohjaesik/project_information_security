@@ -15,6 +15,7 @@ class AnomalyResult:
 class RuleBasedAnomalyDetector:
     """
     간단한 규칙 기반 이상 탐지 (로그인 실패 횟수, 단시간 이벤트 폭증 등).
+    Event.raw_payload["failed_attempts"]를 우선 사용.
     """
 
     def detect(self, events: List[Any]) -> List[AnomalyResult]:
@@ -23,27 +24,32 @@ class RuleBasedAnomalyDetector:
             reasons: List[str] = []
             score = 0.0
 
-            failed = getattr(e, "metadata", {}).get("failed_attempts")
+            # Event(raw_payload=...) 구조에 맞게 우선 raw_payload에서 읽는다.
+            raw: Dict[str, Any] = getattr(e, "raw_payload", {}) or {}
+
+            failed = raw.get("failed_attempts")
             if failed is None:
-                # event dict에서 직접 가져오는 fallback
+                # 혹시 dict나 다른 형태로 들어오는 경우까지 고려한 fallback
                 failed = getattr(e, "failed_attempts", None)
 
             if isinstance(failed, int) and failed >= 5:
                 score += 0.7
                 reasons.append(f"High number of failed attempts ({failed})")
 
-            category = getattr(e, "category", "")
-            if category == "auth" and failed and failed >= 3:
+            category = getattr(e, "category", raw.get("category", ""))
+            if category == "auth" and isinstance(failed, int) and failed >= 3:
                 score += 0.2
                 reasons.append("Auth category with multiple failures")
 
             is_anomaly = score >= 0.7
-            results.append(AnomalyResult(
-                id=getattr(e, "id", ""),
-                is_anomaly=is_anomaly,
-                score=score,
-                reasons=reasons,
-            ))
+            results.append(
+                AnomalyResult(
+                    id=getattr(e, "id", ""),
+                    is_anomaly=is_anomaly,
+                    score=score,
+                    reasons=reasons,
+                )
+            )
         return results
 
 
@@ -68,10 +74,31 @@ class IsolationForestAnomalyDetector:
     def _vectorize(self, event: Any) -> List[float]:
         """
         이벤트를 간단한 feature vector로 변환.
-        v1: severity / category 정도만 사용.
+        v2: severity / category + failed_attempts + event_id + hour 사용.
         """
-        sev = str(getattr(getattr(event, "severity", ""), "value", getattr(event, "severity", "") or "")).lower()
+        # severity
+        sev = str(
+            getattr(
+                getattr(event, "severity", ""),
+                "value",
+                getattr(event, "severity", "") or "",
+            )
+        ).lower()
+        # category
         category = str(getattr(event, "category", "")).lower()
+
+        raw: Dict[str, Any] = getattr(event, "raw_payload", {}) or {}
+        failed = raw.get("failed_attempts", 0)
+        if not isinstance(failed, (int, float)):
+            failed = 0
+
+        event_id = raw.get("event_id", 0)
+        if not isinstance(event_id, (int, float)):
+            event_id = 0
+
+        # 시간 특징 (없으면 0)
+        ts = getattr(event, "timestamp", None)
+        hour = getattr(ts, "hour", 0)
 
         sev_map = {"low": 0, "medium": 1, "high": 2, "critical": 3}
         cat_map = {"auth": 1, "network": 2, "system": 3}
@@ -79,6 +106,9 @@ class IsolationForestAnomalyDetector:
         return [
             float(sev_map.get(sev, 0)),
             float(cat_map.get(category, 0)),
+            float(event_id) / 5000.0,  # 대략적인 스케일링
+            float(failed),
+            float(hour) / 24.0,
         ]
 
     def fit(self, events: List[Any]) -> None:
@@ -91,7 +121,12 @@ class IsolationForestAnomalyDetector:
         if self._model is None or not events:
             # 모델 없으면 전부 정상으로 반환
             return [
-                AnomalyResult(id=getattr(e, "id", ""), is_anomaly=False, score=0.0, reasons=["model_not_available"])
+                AnomalyResult(
+                    id=getattr(e, "id", ""),
+                    is_anomaly=False,
+                    score=0.0,
+                    reasons=["model_not_available"],
+                )
                 for e in events
             ]
         X = [self._vectorize(e) for e in events]
@@ -100,14 +135,16 @@ class IsolationForestAnomalyDetector:
 
         results: List[AnomalyResult] = []
         for e, s, p in zip(events, scores, preds):
-            is_anomaly = (p == -1)
-            reasons = []
+            is_anomaly = p == -1
+            reasons: List[str] = []
             if is_anomaly:
                 reasons.append("IsolationForest flagged this event")
-            results.append(AnomalyResult(
-                id=getattr(e, "id", ""),
-                is_anomaly=is_anomaly,
-                score=float(-s),  # score는 양수일수록 위험하도록 반전
-                reasons=reasons,
-            ))
+            results.append(
+                AnomalyResult(
+                    id=getattr(e, "id", ""),
+                    is_anomaly=is_anomaly,
+                    score=float(-s),  # score는 양수일수록 위험하도록 반전
+                    reasons=reasons,
+                )
+            )
         return results

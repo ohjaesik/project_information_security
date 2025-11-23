@@ -1,0 +1,38 @@
+[
+  {
+    "id": "evt-10",
+    "asset_id": "win-prod-2",
+    "severity": "medium",
+    "category": "auth",
+    "timestamp": "2025-11-23T09:00:00Z",
+    "source": "windows",
+    "failed_attempts": 0
+  },
+  {
+    "id": "evt-11",
+    "asset_id": "win-prod-2",
+    "severity": "high",
+    "category": "system",
+    "timestamp": "2025-11-23T09:05:00Z",
+    "source": "windows",
+    "failed_attempts": 0
+  },
+  {
+    "id": "evt-12",
+    "asset_id": "db-prod-1",
+    "severity": "high",
+    "category": "system",
+    "timestamp": "2025-11-23T09:06:00Z",
+    "source": "db-audit",
+    "failed_attempts": 0
+  },
+  {
+    "id": "evt-13",
+    "asset_id": "db-prod-1",
+    "severity": "critical",
+    "category": "system",
+    "timestamp": "2025-11-23T09:06:30Z",
+    "source": "db-audit",
+    "failed_attempts": 0
+  }
+]
