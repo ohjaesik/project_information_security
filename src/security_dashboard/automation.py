@@ -1,5 +1,3 @@
-# security_dashboard/automation.py
-
 """SOAR automation helpers."""
 from __future__ import annotations
 
@@ -10,19 +8,24 @@ from .models import Alert, Playbook, PlaybookAction
 
 
 class ActionExecutor(Protocol):
-    """Protocol for executing playbook actions."""
+    """
+    Protocol interface for executing playbook actions.
+    """
 
     def execute(self, action: PlaybookAction, context: Dict[str, object]) -> None:
-        """Execute a single action."""
+        """
+        Execute a single playbook action with the given execution context.
+        """
+        ...
 
 
 @dataclass
 class LoggingActionExecutor:
     """
-    실제 액션을 수행하고, 사람이 읽을 수 있는 로그를 executed_actions에 쌓는 실행기.
+    Action executor that records human-readable execution logs.
 
-    DashboardPipeline.run() 에서 self.executed_actions 리스트를 공유해 주입하므로,
-    여기서 append() 하면 최종 result["executed_actions"] 에 그대로 반영된다.
+    The executed action messages are appended to the shared executed_actions list
+    injected by DashboardPipeline.run(), and reflected in the final API result.
     """
 
     executed_actions: List[str]
@@ -31,11 +34,12 @@ class LoggingActionExecutor:
         action_type = action.type
         params = action.parameters or {}
 
-        # 공통 컨텍스트 (incident_id, alert_id 등)
+        # Common execution context (incident_id, alert_id, etc.)
         incident_id = context.get("incident_id", "-")
         alert_id = context.get("alert_id", "-")
 
-        # 실제 환경에 연동하려면 아래 분기 안에 API 호출 / 스크립트 실행을 넣으면 된다.
+        # In a production environment, actual API calls or system commands
+        # should be implemented inside each branch below.
         if action_type == "isolate-host":
             self._isolate_host(params, context)
             msg = f"[isolate-host] Isolated host (incident={incident_id}, alert={alert_id}, params={params})"
@@ -53,59 +57,60 @@ class LoggingActionExecutor:
             msg = f"[notify] Sent notification (incident={incident_id}, alert={alert_id}, params={params})"
 
         else:
-            # 알 수 없는 타입은 그냥 로깅만
+            # Unknown or unsupported action type
             msg = f"[unknown-action] type={action_type}, incident={incident_id}, alert={alert_id}, params={params}"
 
-        # UI에 보여줄 실행 내역 추가
+        # Append the execution log for UI visualization
         self.executed_actions.append(msg)
 
-    # --- 아래 메서드들에 실제 액션(API, 스크립트)을 붙이면 된다. ---
+    # --- The following methods can be connected to real APIs or scripts in production ---
 
     def _isolate_host(self, params: Dict[str, object], context: Dict[str, object]) -> None:
         """
-        호스트 격리 액션.
-        예: 방화벽 API, netsh, EDR API 등을 호출해서 IP/호스트를 차단.
+        Host isolation action.
+        Example use cases:
+        - Firewall API
+        - Network Access Control (NAC)
+        - Endpoint Detection & Response (EDR) platform
 
-        지금은 안전하게 'TODO' 자리 + print만 둔다.
+        Currently implemented as a safe placeholder.
         """
         host = params.get("asset_id") or context.get("asset_id") or "unknown-host"
         method = params.get("method", "network")
 
-        # TODO: 실제 환경에서는 여기서 방화벽 / NAC / EDR API 호출
-        # 예시(Windows 방화벽):
-        #   import subprocess
-        #   subprocess.run(
-        #       ["netsh", "advfirewall", "firewall", "add", "rule",
-        #        "name=BlockHost", "dir=in", f"remoteip={host}", "action=block"],
-        #       check=False,
-        #   )
+        # TODO: Integrate real firewall / NAC / EDR API calls here
         print(f"[ACTION] isolate-host: host={host}, method={method}")
 
     def _disable_account(self, params: Dict[str, object], context: Dict[str, object]) -> None:
         """
-        계정 비활성화 액션.
-        예: AD/LDAP API 호출해서 계정 disabled 처리.
+        User account deactivation action.
+        Example use cases:
+        - Active Directory (AD)
+        - LDAP
         """
         account = params.get("account") or context.get("username") or "unknown-user"
         print(f"[ACTION] disable-account: account={account}")
-        # TODO: 실제 환경 계정 시스템과 연동
+
+        # TODO: Integrate with real identity management systems
 
     def _force_password_reset(self, params: Dict[str, object], context: Dict[str, object]) -> None:
         """
-        비밀번호 초기화/교체 강제.
+        Force password reset action.
         """
         account = params.get("account") or context.get("username") or "unknown-user"
         print(f"[ACTION] force-password-reset: account={account}")
-        # TODO: 비밀번호 재설정 워크플로우 연동
+
+        # TODO: Integrate with password reset workflows
 
     def _notify(self, params: Dict[str, object], context: Dict[str, object]) -> None:
         """
-        Slack / Email / Teams 등 알림 전송.
+        Notification action for Slack, Email, Teams, etc.
         """
         channel = params.get("channel", "slack")
         print(f"[ACTION] notify via {channel}: context={context}")
-        # TODO: 웹훅, SMTP 등 실제 알림 연동
-        # 예시 (Slack Webhook):
+
+        # TODO: Integrate with webhooks, SMTP servers, or messaging APIs
+        # Example (Slack webhook):
         #   import os, requests
         #   url = os.environ.get("SLACK_WEBHOOK_URL")
         #   if url:
@@ -114,7 +119,7 @@ class LoggingActionExecutor:
 
 class PlaybookEngine:
     """
-    Run security playbooks for alerts.
+    Playbook execution engine for handling security alerts.
     """
 
     def __init__(self, playbooks: Iterable[Playbook], executor_factory):
@@ -122,10 +127,16 @@ class PlaybookEngine:
         self.executor_factory = executor_factory
 
     def run(self, alert: Alert, context: Dict[str, object]) -> List[str]:
+        """
+        Execute all playbooks whose trigger conditions match the given alert.
+        """
         executed: List[str] = []
 
         for pb in self.playbooks:
-            # playbook.trigger_condition이 rule_id 또는 severity 값과 매칭되면 실행
+            # The playbook is triggered if its condition matches:
+            # - alert.rule_id
+            # - alert.severity
+            # - wildcard ("*")
             if pb.trigger_condition in {alert.rule_id, alert.severity.value, "*"}:
                 executor = self.executor_factory(pb)
 

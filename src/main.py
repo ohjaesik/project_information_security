@@ -14,7 +14,11 @@ from security_dashboard.risk import RiskScorer
 from security_dashboard.scenarios import list_scenarios, run_scenario
 from security_dashboard.notifications import build_recommendations
 
+
+# FastAPI application instance for the Security Dashboard backend
 app = FastAPI(title="Security Dashboard API", version="0.2.0")
+
+# Enable CORS to allow requests from frontend dashboards (React/Grafana)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -23,11 +27,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# collector가 돌린 "실시간" 결과를 저장
+# Stores the most recent real-time pipeline execution result (used by collector)
 last_result: Optional[Dict[str, Any]] = None
 
 
 def to_jsonable(obj: Any) -> Any:
+    """
+    Convert arbitrary Python objects (dataclasses, datetime, lists, dicts)
+    into JSON-serializable formats for API responses.
+    """
     if is_dataclass(obj):
         d = asdict(obj)
         return {k: to_jsonable(v) for k, v in d.items()}
@@ -42,8 +50,16 @@ def to_jsonable(obj: Any) -> Any:
 
 def run_pipeline_core(events: List[Dict[str, Any]]) -> Dict[str, Any]:
     """
-    공통 파이프라인 실행 + 이상탐지 + RiskScore + 대응 권고까지 묶은 함수.
-    /run-pipeline (데이터셋용), /ingest-logs (collector용) 에서 공통 사용.
+    Execute the full security analysis pipeline:
+    - Event ingestion
+    - Rule-based anomaly detection
+    - ML-based anomaly detection (Isolation Forest)
+    - RiskScore calculation
+    - Incident-level response recommendation generation
+
+    This function is shared by both:
+    - /run-pipeline (dataset & testing)
+    - /ingest-logs (real-time collector input)
     """
     pipeline = default_pipeline(InMemoryEventSource(events))
     result = pipeline.run()
@@ -52,7 +68,7 @@ def run_pipeline_core(events: List[Dict[str, Any]]) -> Dict[str, Any]:
     alerts_out = result.get("alerts", [])
     incidents_out = result.get("incidents", [])
 
-    # 1) 이상 탐지
+    # 1) Anomaly Detection Stage
     rule_detector = RuleBasedAnomalyDetector()
     iso_detector = IsolationForestAnomalyDetector()
 
@@ -65,12 +81,12 @@ def run_pipeline_core(events: List[Dict[str, Any]]) -> Dict[str, Any]:
         "isolation_forest": [to_jsonable(a) for a in iso_anoms],
     }
 
-    # 2) RiskScore 계산
+    # 2) RiskScore Calculation Stage
     scorer = RiskScorer()
     incident_scores = [scorer.score_incident(inc) for inc in incidents_out]
     incident_risk_summary = scorer.build_risk_summary(incident_scores)
 
-    # 3) 인시던트별 대응 권고
+    # 3) Automated Response Recommendation Stage
     recommendations = []
     for inc, score in zip(incidents_out, incident_scores):
         rec = build_recommendations(inc, score.score)
@@ -94,7 +110,8 @@ def run_pipeline_core(events: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 def normalize_logs(logs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
-    collector가 보내는 원시 로그 → 파이프라인용 이벤트 dict로 정규화.
+    Normalize raw logs received from the collector into
+    the unified event schema used by the pipeline.
     """
     events: List[Dict[str, Any]] = []
     for i, log in enumerate(logs, start=1):
@@ -113,13 +130,15 @@ def normalize_logs(logs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return events
 
 
-# 1) 데이터셋 / 시나리오 / UI 테스트용: last_result 갱신 안 함
+# 1) Dataset / Scenario / UI Testing Endpoint
+#    This endpoint does NOT update last_result
 @app.post("/run-pipeline")
 def run_pipeline(events: List[Dict[str, Any]]) -> Dict[str, Any]:
     return run_pipeline_core(events)
 
 
-# 2) collector(실시간)용: 여기서만 last_result 갱신
+# 2) Real-time Collector Endpoint
+#    This endpoint updates last_result for UI polling
 @app.post("/ingest-logs")
 def ingest_logs(logs: List[Dict[str, Any]]) -> Dict[str, Any]:
     global last_result
@@ -128,20 +147,28 @@ def ingest_logs(logs: List[Dict[str, Any]]) -> Dict[str, Any]:
     return last_result
 
 
-# 3) 실시간 결과 조회용: UI가 polling
+# 3) Real-time Result Fetching Endpoint
+#    Used by the frontend dashboard through polling
 @app.get("/last-result")
 def get_last_result() -> Dict[str, Any]:
     return last_result or {}
 
 
-# 시나리오 관련 API
+# Scenario Management APIs
 @app.get("/scenarios")
 def get_scenarios():
+    """
+    Return the list of available cyber wargaming scenarios.
+    """
     return list_scenarios()
 
 
 @app.post("/scenarios/{key}/run")
 def run_scenario_api(key: str):
+    """
+    Execute a selected cyber wargaming scenario and return
+    the generated attack logs and detection results.
+    """
     try:
         result = run_scenario(key)
     except KeyError:

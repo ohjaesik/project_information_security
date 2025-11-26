@@ -1,3 +1,4 @@
+
 """Event ingestion utilities for the security dashboard."""
 from __future__ import annotations
 

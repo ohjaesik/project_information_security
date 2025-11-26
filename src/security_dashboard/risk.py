@@ -1,4 +1,3 @@
-# security_dashboard/risk.py
 from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, Any, List
@@ -6,18 +5,28 @@ from typing import Dict, Any, List
 
 @dataclass
 class RiskScore:
+    """
+    Data structure representing a risk score result.
+    """
     id: str
-    score: int          # 0 ~ 100
-    reasons: List[str]
+    score: int          # Risk score in the range 0 ~ 100
+    reasons: List[str] # Explanatory reasons for the score
 
 
 class RiskScorer:
     """
-    이벤트 / 알림 / 인시던트에 대해 0~100 RiskScore 산출.
-    v1: 규칙 기반 + 간단 가중치 합산.
+    Risk scoring engine for Events, Alerts, and Incidents.
+    Version 1: Rule-based weighted aggregation model.
     """
 
     def score_event(self, event: Any) -> RiskScore:
+        """
+        Calculate a RiskScore for a single security event based on:
+        - Severity level
+        - Event category
+        - Authentication failure frequency
+        - Asset criticality
+        """
         reasons: List[str] = []
         score = 0
 
@@ -25,7 +34,7 @@ class RiskScorer:
         asset = getattr(event, "asset_id", "unknown")
         category = getattr(event, "category", "unknown")
 
-        # severity 기반 기본 가중치
+        # Base weight derived from severity level
         if sev:
             sev_val = str(getattr(sev, "value", sev)).lower()
             if sev_val == "critical":
@@ -41,19 +50,19 @@ class RiskScorer:
                 score += 5
                 reasons.append("Low severity")
 
-        # 인증/계정 관련 이벤트
+        # Additional weight for authentication or identity-related events
         if category in ("auth", "identity"):
             score += 15
             reasons.append("Authentication related event")
 
-        # Windows / auth 로그에서 failed_attempts 반영
+        # Reflect failed login attempts from raw event payload
         raw = getattr(event, "raw_payload", {}) or {}
         failed = raw.get("failed_attempts")
         if isinstance(failed, int) and failed >= 5:
             score += 20
             reasons.append(f"High number of failed attempts ({failed})")
 
-        # 프로덕션 자산
+        # Additional weight for production assets
         if isinstance(asset, str) and "prod" in asset.lower():
             score += 10
             reasons.append("Production asset")
@@ -62,6 +71,10 @@ class RiskScorer:
         return RiskScore(id=getattr(event, "id", ""), score=score, reasons=reasons)
 
     def score_alert(self, alert: Any) -> RiskScore:
+        """
+        Calculate a RiskScore for a security alert.
+        The primary factor is the alert severity level.
+        """
         reasons: List[str] = []
         score = 0
 
@@ -81,14 +94,15 @@ class RiskScorer:
                 score += 10
                 reasons.append("Low alert")
 
-        # 인시던트와 연계되면 추가 가중치 줄 수도 있음 (v2)
+        # Future extension: Add correlation-based weighting with incidents
         score = int(max(0, min(100, score)))
         return RiskScore(id=getattr(alert, "id", ""), score=score, reasons=reasons)
 
     def score_incident(self, incident: Any) -> RiskScore:
         """
-        Incident.priority 는 Severity(low/medium/high/critical)이므로
-        그 기준으로 점수 매핑.
+        Calculate a RiskScore for an Incident object based on:
+        - Incident priority (low, medium, high, critical)
+        - Operator assignment status
         """
         reasons: List[str] = []
         score = 0
@@ -109,6 +123,7 @@ class RiskScorer:
                 score += 20
                 reasons.append("Low priority incident")
 
+        # Additional weight if the incident is actively assigned to an operator
         if getattr(incident, "assignee", None):
             score += 5
             reasons.append("Assigned to operator")
@@ -118,7 +133,10 @@ class RiskScorer:
 
     def build_risk_summary(self, incident_scores: List[RiskScore]) -> Dict[str, Any]:
         """
-        요약 카드 / 위험 지도 등에 쓸 집계 정보.
+        Generate aggregated risk metrics for dashboard visualization:
+        - Maximum risk score
+        - Average risk score
+        - List of high-risk incident IDs
         """
         if not incident_scores:
             return {

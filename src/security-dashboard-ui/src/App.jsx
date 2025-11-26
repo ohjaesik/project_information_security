@@ -138,7 +138,7 @@ const fetchLatest = async () => {
     const data = JSON.parse(text);
     if (!data.events) return;
 
-    // 🔥 여기서 UI 전체를 Windows 기반 결과로 동기화
+    //  여기서 UI 전체를 Windows 기반 결과로 동기화
     setResult(data);
     setEvents(data.events);
   } catch (e) {
@@ -161,7 +161,7 @@ const fetchLatest = async () => {
         asset_id: "srv-1",
         severity: "medium",
         category: "auth",
-        timestamp: new Date().toISOString(), // ✅ toISOStirng → toISOString
+        timestamp: new Date().toISOString(), //  toISOStirng → toISOString
         source: "auth",
       },
     ]);

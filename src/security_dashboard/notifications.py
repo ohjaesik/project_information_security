@@ -1,4 +1,3 @@
-# security_dashboard/notifications.py
 from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
@@ -13,7 +12,8 @@ class Recommendation:
 
 def build_recommendations(incident: Any, risk_score: int) -> Recommendation:
     """
-    위험도 + 인시던트 속성 기반 대응 권고 텍스트 생성 (v1: 규칙 기반).
+    Generate response recommendations based on risk score and incident properties
+    (v1: rule-based).
     """
     title = "Review incident"
     actions: List[str] = []
@@ -37,20 +37,20 @@ def build_recommendations(incident: Any, risk_score: int) -> Recommendation:
     )
 
 
-# Slack / Email 알림은 실제 환경에 맞게 webhook/SMTP 설정 필요.
-# 여기서는 로깅/프린트 기반 stub.
+# Slack / Email notifications require webhook/SMTP configuration in a real environment.
+# Here, they are implemented as logging/print-based stubs.
 def send_slack_alert(webhook_url: str, payload: Dict[str, Any]) -> None:
     """
-    실제 구현 시 requests.post(webhook_url, json=payload) 사용.
-    현재는 stub.
+    In a real implementation, use requests.post(webhook_url, json=payload).
+    This is currently a stub.
     """
     print("[SLACK] would send:", payload)
 
 
 def send_email_alert(to: str, subject: str, body: str) -> None:
     """
-    실제 구현 시 smtplib 사용.
-    현재는 stub.
+    In a real implementation, use smtplib.
+    This is currently a stub.
     """
     print(f"[EMAIL] to={to}, subject={subject}")
     print(body)
